@@ -7,6 +7,8 @@ import { SidemenuComponent } from '../../shared/sidemenu/sidemenu.component';
 import { DashboardPageComponent } from './pages/dashboard-page/dashboard-page.component';
 import { ListUserPageComponent } from './pages/list-user-page/list-user-page.component';
 import { StatisticCardComponent } from './components/statistic-card/statistic-card.component';
+import { NgChartsModule } from 'ng2-charts';
+import { StatiticsGraphicBarComponent } from './components/statitics-graphic-bar/statitics-graphic-bar.component';
 
 
 @NgModule({
@@ -14,12 +16,14 @@ import { StatisticCardComponent } from './components/statistic-card/statistic-ca
     DashboardLayoutComponent,
     DashboardPageComponent,
     ListUserPageComponent,
-    StatisticCardComponent
+    StatisticCardComponent,
+    StatiticsGraphicBarComponent
   ],
   imports: [
     CommonModule,
     DashboardRoutingModule,
-    SidemenuComponent
+    SidemenuComponent,
+    NgChartsModule,
   ]
 })
 export class DashboardModule { }

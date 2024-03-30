@@ -6,6 +6,7 @@ import { AuthLayoutComponent } from './layout/auth-layout/auth-layout.component'
 import { LoginPageComponent } from './pages/login-page/login-page.component';
 import { RegisterPageComponent } from './pages/register-page/register-page.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { StoreModule } from '@ngrx/store';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { ReactiveFormsModule } from '@angular/forms';
   imports: [
     CommonModule,
     AuthRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    StoreModule.forFeature('auth', {}),
   ]
 })
 export class AuthModule { }

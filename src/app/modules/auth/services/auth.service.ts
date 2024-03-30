@@ -2,7 +2,7 @@ import { Injectable, computed, inject, signal } from '@angular/core';
 import { environment } from '../../../../environments/environments';
 import { HttpClient } from '@angular/common/http';
 import { Observable, map, tap } from 'rxjs';
-import { LoginResponse, User } from '../../../core/interfaces';
+import { LoginResponse, UserResponse } from '../../../core/interfaces';
 import { AuthStatus } from '../../../core/enums';
 
 @Injectable({
@@ -12,7 +12,7 @@ export class AuthService {
   private readonly baseUrl: string = environment.baseUrl;
   private http = inject(HttpClient);
 
-  private _currentUser = signal<User | null>(null);
+  private _currentUser = signal<UserResponse | null>(null);
   private _authStatus = signal<AuthStatus>(AuthStatus.checking);
 
   // public currentUser = computed(this._currentUser);
@@ -40,7 +40,7 @@ export class AuthService {
     throw new Error('Method not implemented.');
   }
 
-  register(user: User): Observable<boolean> {
+  register(user: UserResponse): Observable<boolean> {
     throw new Error('Method not implemented.');
   }
 }

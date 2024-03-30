@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ChartConfiguration } from 'chart.js';
 
 @Component({
   selector: 'ui-statistic-card',
@@ -6,5 +7,4 @@ import { Component } from '@angular/core';
   styleUrl: './statistic-card.component.css'
 })
 export class StatisticCardComponent {
-
 }
