@@ -1,0 +1,100 @@
+<main class="w-full h-full overflow-auto text-gray-300 font-semibold">
+  <div class="flex justify-center">
+    <div class="h-auto rounded-md shadow-md w-1/2 bg-black/20 p-6">
+      <div class="flex justify-between">
+        <h1 class="text-2xl font-black">Informacion Usuario</h1>
+        <button
+          class="rounded-full h-8 w-8 border-e-red-50 border flex justify-center items-center text-xl hover:bg-e-red-50 hover:text-gray-500 hover:border-gray-600 hover:border-2 hover:text-sm transition-all duration-100 ease-in-out"
+          routerLink="/usuarios"
+        >
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
+      </div>
+
+      <div class="pt-4 text-sm space-y-3">
+        <div class="flex">
+          <div class="flex w-1/2">
+            <p>Nombre:</p>
+            <span>Datos del nombre</span>
+          </div>
+          <div class="flex">
+            <p>Apellido:</p>
+            <span>Datos de apellido</span>
+          </div>
+        </div>
+        <div class="flex">
+          <div class="flex w-1/2">
+            <p>Correo:</p>
+            <span>user&#64;example.com </span>
+          </div>
+          <div class="flex">
+            <p>Rol:</p>
+            <span>Datos del rol</span>
+          </div>
+        </div>
+
+        <div class="flex">
+          <div class="flex w-1/2">
+            <p>Telefono:</p>
+            <span>Telefono</span>
+          </div>
+          <div class="flex">
+            <p>Fecha de nacimiento:</p>
+            <span>Fecha de nacimiento</span>
+          </div>
+        </div>
+
+        <div class="flex">
+          <div class="flex w-1/2">
+            <p>Fecha de creacion:</p>
+            <span>Fecha de creacion</span>
+          </div>
+          <div class="flex">
+            <p>Ultima actualizacion:</p>
+            <span>Fecha de actualizacion</span>
+          </div>
+        </div>
+
+        <div class="flex">
+          <div class="flex w-1/2">
+            <p>Estado:</p>
+            <span>Activo</span>
+          </div>
+          <div class="flex">
+            <p>Ultima sesion:</p>
+            <span>Fecha de ultima sesion</span>
+          </div>
+        </div>
+        <!-- foto de perfil - historial de cursos cursos anotados notas a un lado -->
+        <div class="flex h-auto items-center">
+          <div class="w-1/2">
+            <div class="flex-col">
+              <div class="flex">
+                <p>Historial de cursos:</p>
+                <span>Historial de cursos</span>
+              </div>
+
+              <div class="flex">
+                <p>Cursos anotados:</p>
+                <span>Cursos anotados</span>
+              </div>
+
+              <div class="flex">
+                <p>Notas:</p>
+                <span>Notas</span>
+              </div>
+            </div>
+          </div>
+          <div class="flex w-1/2">
+            <p>Foto de perfil:</p>
+            <img
+              src="https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50"
+              alt="imagen perfil"
+              class="text-xs rounded-full"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

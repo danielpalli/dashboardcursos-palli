@@ -1,0 +1,41 @@
+<div
+  [ngClass]="{ 'w-60': sidebarOpen, 'w-14': !sidebarOpen }"
+  class="text-white h-screen transition-width duration-500 ease-in-out bg-[rgb(8,8,8)] flex flex-col"
+>
+  <div class="flex justify-end p-4">
+    <button (click)="toggleSidebar()" class="focus:outline-none">
+      <i
+        class="fas fa-chevron-left fa-lg transform transition-transform duration-300 text-gray-400"
+        [ngClass]="{ 'rotate-180': !sidebarOpen }"
+      ></i>
+    </button>
+  </div>
+
+  <button routerLink="usuarios" class="group rounded-xl text-gray-600 relative">
+    <!-- Icono de Font Awesome de usuarios -->
+    <i class="fas fa-users fa-lg"></i>
+    <span
+      class="absolute top-0 left-full ml-2 transform -translate-y-1/2 transition-opacity duration-500"
+      [ngClass]="{
+        'opacity-100': sidebarOpen,
+        'opacity-0': !sidebarOpen
+      }"
+    >
+      Usuarios
+    </span>
+  </button>
+
+  <button routerLink="cursos" class="group rounded-xl text-gray-600 relative">
+    <!-- Icono de Font Awesome de cursos -->
+    <i class="fas fa-book fa-lg"></i>
+    <span
+      class="absolute top-0 left-full ml-2 transform -translate-y-1/2 transition-opacity duration-500"
+      [ngClass]="{
+        'opacity-100': sidebarOpen,
+        'opacity-0': !sidebarOpen
+      }"
+    >
+      Cursos
+    </span>
+  </button>
+</div>

@@ -1,0 +1,48 @@
+<header class="w-full text-white">
+  <div class="flex justify-between items-center">
+    <div class="font-semibold">
+      <h1 class="text-gray-300">Admnistrador de Usuarios</h1>
+    </div>
+
+    <div class="relative">
+      <div class="flex items-center justify-between p-2 w-48">
+        <div class="flex items-center gap-x-2">
+          <img
+            src="/assets/imgs/unnamed.jpg"
+            alt="imagen perfil"
+            class="text-xs w-8 h-8 rounded-full"
+          />
+          <div class="flex flex-col">
+            <span class="text-[0.8em]">Daniel Palli</span>
+            <span class="text-[0.58em] text-gray-400">Administrador</span>
+          </div>
+        </div>
+        <button
+          class="rounded-full px-0.5 text-white text-xs bg-gray-500 drop-shadow-md"
+          (click)="toggleReports()"
+        >
+          <i
+            [ngClass]="{
+              'fa-chevron-down': !reportsOpen,
+              'fa-chevron-up': reportsOpen
+            }"
+            class="fas"
+          ></i>
+        </button>
+      </div>
+      <div
+        class="absolute left-0 w-48 overflow-hidden transition-all duration-300 ease-in-out"
+        [style.maxHeight]="reportsOpen ? '100px' : '0'"
+        [style.visibility]="reportsOpen ? 'visible' : 'hidden'"
+        [style.opacity]="reportsOpen ? '1' : '0'"
+      >
+        <div class="p-2 md:p-0">
+          <p class="text-sm">
+            Nombre: Daniel Palli <br />
+            Rol: Administrador
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

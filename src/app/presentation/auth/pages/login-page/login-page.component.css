@@ -1,0 +1,7 @@
+:host {
+  display: block;
+}
+
+.input {
+  @apply bg-[#2E2F36] py-2 px-4 rounded-md placeholder-gray-400 border border-transparent transition-all duration-200;
+}
