@@ -1,6 +1,7 @@
 import { Routes } from '@angular/router';
-import DashboardLayoutComponent from './presentation/dashboard/layouts/dashboard-layout/dashboard-layout.component';
-import AuthLayoutComponent from './presentation/auth/layouts/auth-layout/auth-layout.component';
+import DashboardLayoutComponent from './features/dashboard/layouts/dashboard-layout/dashboard-layout.component';
+import AuthLayoutComponent from './features/auth/layouts/auth-layout/auth-layout.component';
+import { isAuthenticatedGuard } from './features/auth/guards/isAuthenticated.guard';
 
 export const routes: Routes = [
   {
@@ -10,12 +11,12 @@ export const routes: Routes = [
       {
         path: 'login',
         loadComponent: () =>
-          import('./presentation/auth/pages/login-page/login-page.component'),
+          import('./features/auth/pages/login-page/login-page.component'),
       },
       {
         path: 'registro',
         loadComponent: () =>
-          import('./presentation/auth/pages/register-page/register-page.component'),
+          import('./features/auth/pages/register-page/register-page.component'),
       },
       {
         path: '**',
@@ -26,32 +27,33 @@ export const routes: Routes = [
   },
   {
     path: '',
+    canActivate: [isAuthenticatedGuard],
     component: DashboardLayoutComponent,
     children: [
       {
         path: 'dashboard',
         loadComponent: () =>
-          import('./presentation/dashboard/pages/dashboard-page/dashboard-page.component'),
+          import('./features/dashboard/pages/dashboard-page/dashboard-page.component'),
       },
       {
         path: 'cursos/:tecnologia/:id',
         loadComponent: () =>
-          import('./presentation/dashboard/pages/course-info-page/course-info-page.component'),
+          import('./features/dashboard/pages/course-info-page/course-info-page.component'),
       },
       {
         path: 'cursos',
         loadComponent: () =>
-          import('./presentation/dashboard/pages/course-page/course-page.component'),
+          import('./features/dashboard/pages/course-page/course-page.component'),
       },
       {
         path: 'usuarios/informacion/:id',
         loadComponent: () =>
-          import('./presentation/dashboard/pages/user-info-page/user-info-page.component'),
+          import('./features/dashboard/pages/user-info-page/user-info-page.component'),
       },
       {
         path: 'usuarios',
         loadComponent: () =>
-          import('./presentation/dashboard/pages/user-page/user-page.component'),
+          import('./features/dashboard/pages/user-page/user-page.component'),
       },
       {
         path: '**',
